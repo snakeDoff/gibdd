@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="PddRules">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>621</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>1. Общие положения</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2. Общие обязанности водителей</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3. Применение спец. сигналов</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4. Обязанности пешеходов</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5. Обязанности пассажиров</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6. Сигналы светофора и регулировщика</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7. Применение аварийной сигнализации и знака аварийной остановки</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8. Начало движения, маневрирование</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9. Расположение транспортных средств на проезжей части</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10. Скорость движения</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11. Обгон, опережение, встречный разъезд</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>12. Остановка и стоянка</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>13. Проезд перекрестков</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>14. Пешеходные переходы и места остановок маршрутных транспортных средств</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>15. Движение через железнодорожные пути</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>16. Движение по автомагистралям</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>17. Движение в жилых зонах</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>18. Приоритет маршрутных транспортных средств</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>19. Пользование внешними световыми приборами и звуковыми сигналами</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20. Буксировка механических транспортных средств</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>21. Учебная езда</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>22. Перевозка людей</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>23. Перевозка грузов</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>24. Дополнительные требования к движению велосипедистов и водителей мопедов</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>25. Дополнительные требования к движению гужевых повозок, а также к прогону животных </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>26. Нормы времени управления транспортным средством и отдыха</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="lab1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>331</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Правила доржного движения </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="go2rules">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>40</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Перейти</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="go2signs">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>110</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Перейти</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab1_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Дорожные знаки и разметка</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="PddSigns">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>621</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>1. Предупреждающие знаки</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2. Знаки приоритета</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3. Запрещающие знаки</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4. Предписывающие знаки</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5. Знаки особых предписаний</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6. Информационные знаки</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7. Знаки сервиса</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8. Знаки дополнительной информации (таблички)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1. Горизонтальная разметка</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2. Вертикальная разметка</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
