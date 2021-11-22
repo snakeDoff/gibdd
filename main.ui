@@ -10,6 +10,36 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -277,6 +307,351 @@
       <string>2. Вертикальная разметка</string>
      </property>
     </item>
+   </widget>
+   <widget class="QComboBox" name="PddDopusk">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>621</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Основные положения по допуску транспортных средств к эксплуатации и обязанности должностных лиц по обеспечению безопасности дорожного движения</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Перечень неисправностей и условий, при которых запрещается эксплуатация транспортных средств</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="go2dopusks">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>180</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Перейти</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab1_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Допуск и неисправности т.с</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab1_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Билеты ПДД 2021</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab1_5">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>530</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Актуально на 01.11.2021</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab1_6">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>240</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Экзамен категории ABM</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="PddVariants">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Вариант 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 5</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 6</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 7</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 8</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 9</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 11</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 12</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 13</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 14</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 15</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 16</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 17</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 18</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 19</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 20</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 21</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 22</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 23</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 24</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 25</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 26</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 27</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 28</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 29</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 30</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 31</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 32</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 33</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 34</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 35</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 36</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 37</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 38</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 39</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вариант 40</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="go2exams">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>280</y>
+      <width>261</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Приступить к решению</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="go2bilets">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>261</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Приступить к решению</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
