@@ -169,12 +169,11 @@ class MyWidget(QMainWindow):
         self.w2.poyas.hide()
         self.w2.sender().setStyleSheet('background: rgb(0,125,125);')
         self.curbuton = self.w2.sender()
-        if self.stat[str(self.current)][0] == 0:
-            self.w2.ans1.setStyleSheet('background: rgb(225,225,225);')
-            self.w2.ans2.setStyleSheet('background: rgb(225,225,225);')
-            self.w2.ans3.setStyleSheet('background: rgb(225,225,225);')
-            self.w2.ans4.setStyleSheet('background: rgb(225,225,225);')
-        elif self.stat[str(self.current)][0] == 1:
+        self.w2.ans1.setStyleSheet('background: rgb(225,225,225);')
+        self.w2.ans2.setStyleSheet('background: rgb(225,225,225);')
+        self.w2.ans3.setStyleSheet('background: rgb(225,225,225);')
+        self.w2.ans4.setStyleSheet('background: rgb(225,225,225);')
+        if self.stat[str(self.current)][0] == 1:
             if self.w2.ans1.text() == self.questions[self.current - 1][5]:
                 self.w2.ans1.setStyleSheet('background: rgb(0,255,125);')
             if self.w2.ans2.text() == self.questions[self.current - 1][5]:
@@ -197,6 +196,14 @@ class MyWidget(QMainWindow):
                 self.w2.ans3.setStyleSheet('background: rgb(255,20,0);')
             if self.stat[str(self.current)][1] == 4:
                 self.w2.ans4.setStyleSheet('background: rgb(255,20,0);')
+            if self.w2.ans1.text() == self.questions[self.current - 1][5]:
+                self.w2.ans1.setStyleSheet('background: rgb(0,255,125);')
+            if self.w2.ans2.text() == self.questions[self.current - 1][5]:
+                self.w2.ans2.setStyleSheet('background: rgb(0,255,125);')
+            if self.w2.ans3.text() == self.questions[self.current - 1][5]:
+                self.w2.ans3.setStyleSheet('background: rgb(0,255,125);')
+            if self.w2.ans4.text() == self.questions[self.current - 1][5]:
+                self.w2.ans4.setStyleSheet('background: rgb(0,255,125);')
             self.w2.ans1.setDisabled(True)
             self.w2.ans2.setDisabled(True)
             self.w2.ans3.setDisabled(True)
