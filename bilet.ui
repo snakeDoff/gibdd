@@ -43,7 +43,7 @@
      <x>10</x>
      <y>10</y>
      <width>661</width>
-     <height>301</height>
+     <height>311</height>
     </rect>
    </property>
    <property name="text">
@@ -109,9 +109,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>430</y>
+     <y>420</y>
      <width>661</width>
-     <height>361</height>
+     <height>371</height>
     </rect>
    </property>
    <property name="text">
@@ -438,6 +438,35 @@
     <string/>
    </property>
   </widget>
+  <zorder>question</zorder>
+  <zorder>ans1</zorder>
+  <zorder>ans2</zorder>
+  <zorder>ans3</zorder>
+  <zorder>poyas</zorder>
+  <zorder>g1</zorder>
+  <zorder>g2</zorder>
+  <zorder>g3</zorder>
+  <zorder>g5</zorder>
+  <zorder>g4</zorder>
+  <zorder>g6</zorder>
+  <zorder>g8</zorder>
+  <zorder>g7</zorder>
+  <zorder>g10</zorder>
+  <zorder>g9</zorder>
+  <zorder>g11</zorder>
+  <zorder>g12</zorder>
+  <zorder>g14</zorder>
+  <zorder>g13</zorder>
+  <zorder>g16</zorder>
+  <zorder>g15</zorder>
+  <zorder>g17</zorder>
+  <zorder>g18</zorder>
+  <zorder>g20</zorder>
+  <zorder>g19</zorder>
+  <zorder>timer</zorder>
+  <zorder>label_2</zorder>
+  <zorder>final_2</zorder>
+  <zorder>ans4</zorder>
  </widget>
  <resources/>
  <connections/>
