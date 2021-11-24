@@ -84,7 +84,18 @@ def rrules(text):
         return 2
     if text == 'Вариант 3':
         return 3
-
+    if text == 'Вариант 4':
+        return 4
+    if text == 'Вариант 5':
+        return 5
+    if text == 'Вариант 6':
+        return 6
+    if text == 'Вариант 7':
+        return 7
+    if text == 'Вариант 8':
+        return 8
+    if text == 'Вариант 9':
+        return 9
 
 
 
