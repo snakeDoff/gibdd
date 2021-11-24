@@ -547,10 +547,11 @@ class MyWidget(QMainWindow):
                     vari = random.randrange(1, 5)
             self.questions = self.questions + cur.execute(f"""SELECT question, firstu, secondu, firdu, fourth, rightu, poyas FROM questions
                                 WHERE variant = {vari} and block = {missedblock1}""").fetchall()
+            print(self.questions)
             con.close()
 
 
-        self.go2over1()
+            self.go2over1()
         if self.c == 20 and self.t == 18:
             self.go2over1()
             self.go2over2()

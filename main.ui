@@ -200,7 +200,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Правила доржного движения </string>
+     <string>Правила дорожного движения </string>
     </property>
    </widget>
    <widget class="QPushButton" name="go2rules">
