@@ -367,6 +367,7 @@ class MyWidget(QMainWindow):
         self.ended = False
         self.overtime1 = False
         self.overtime2 = False
+        self.misses = []
         self.c = 0
         self.t = 0
         self.stat = {'1': (0, 0), '2': (0, 0), '3': (0, 0), '4': (0, 0), '5': (0, 0), '6': (0, 0), '7': (0, 0),
@@ -374,6 +375,7 @@ class MyWidget(QMainWindow):
                      '15': (0, 0), '16': (0, 0), '17': (0, 0), '18': (0, 0), '19': (0, 0), '20': (0, 0),
                      '21': (0, 0), '22': (0, 0), '23': (0, 0), '24': (0, 0), '25': (0, 0), '26': (0, 0),
                      '27': (0, 0), '28': (0, 0), '29': (0, 0), '30': (0, 0)}
+
 
     def choseEX(self):
         self.w3.ans1.setDisabled(False)
@@ -410,50 +412,45 @@ class MyWidget(QMainWindow):
         self.w3.ans2.setStyleSheet('background: rgb(225,225,225);')
         self.w3.ans3.setStyleSheet('background: rgb(225,225,225);')
         self.w3.ans4.setStyleSheet('background: rgb(225,225,225);')
-        if self.stat[str(self.current)][0] == 1:
-            if self.w3.ans1.text() == self.questions[self.current - 1][5] and self.ended:
+        if self.stat[str(self.current)][0] == 1 and self.ended:
+            if self.w3.ans1.text() == self.questions[self.current - 1][5]:
                 self.w3.ans1.setStyleSheet('background: rgb(0,255,125);')
-                self.w3.poyas.show()
-            if self.w3.ans2.text() == self.questions[self.current - 1][5] and self.ended:
+            if self.w3.ans2.text() == self.questions[self.current - 1][5]:
                 self.w3.ans2.setStyleSheet('background: rgb(0,255,125);')
-                self.w3.poyas.show()
-            if self.w3.ans3.text() == self.questions[self.current - 1][5] and self.ended:
+            if self.w3.ans3.text() == self.questions[self.current - 1][5]:
                 self.w3.ans3.setStyleSheet('background: rgb(0,255,125);')
-                self.w3.poyas.show()
-            if self.w3.ans4.text() == self.questions[self.current - 1][5] and self.ended:
+            if self.w3.ans4.text() == self.questions[self.current - 1][5]:
                 self.w3.ans4.setStyleSheet('background: rgb(0,255,125);')
-                self.w3.poyas.show()
             self.w3.ans1.setDisabled(True)
             self.w3.ans2.setDisabled(True)
             self.w3.ans3.setDisabled(True)
             self.w3.ans4.setDisabled(True)
-        elif self.stat[str(self.current)][0] == 2:
-            if self.stat[str(self.current)][1] == 1 and self.ended:
+            self.w3.poyas.show()
+        elif self.stat[str(self.current)][0] == 2 and self.ended:
+            if self.stat[str(self.current)][1] == 1:
                 self.w3.ans1.setStyleSheet('background: rgb(255,20,0);')
-                self.w3.poyas.show()
-            if self.stat[str(self.current)][1] == 2 and self.ended:
+            if self.stat[str(self.current)][1] == 2:
                 self.w3.ans2.setStyleSheet('background: rgb(255,20,0);')
-                self.w3.poyas.show()
-            if self.stat[str(self.current)][1] == 3 and self.ended:
+            if self.stat[str(self.current)][1] == 3:
                 self.w3.ans3.setStyleSheet('background: rgb(255,20,0);')
-                self.w3.poyas.show()
-            if self.stat[str(self.current)][1] == 4 and self.ended:
+            if self.stat[str(self.current)][1] == 4:
                 self.w3.ans4.setStyleSheet('background: rgb(255,20,0);')
-                self.w3.poyas.show()
-            if self.w3.ans1.text() == self.questions[self.current - 1][5] and self.ended:
+            if self.w3.ans1.text() == self.questions[self.current - 1][5]:
                 self.w3.ans1.setStyleSheet('background: rgb(0,255,125);')
-            if self.w3.ans2.text() == self.questions[self.current - 1][5] and self.ended:
+            if self.w3.ans2.text() == self.questions[self.current - 1][5]:
                 self.w3.ans2.setStyleSheet('background: rgb(0,255,125);')
-            if self.w3.ans3.text() == self.questions[self.current - 1][5] and self.ended:
+            if self.w3.ans3.text() == self.questions[self.current - 1][5]:
                 self.w3.ans3.setStyleSheet('background: rgb(0,255,125);')
-            if self.w3.ans4.text() == self.questions[self.current - 1][5] and self.ended:
+            if self.w3.ans4.text() == self.questions[self.current - 1][5]:
                 self.w3.ans4.setStyleSheet('background: rgb(0,255,125);')
             self.w3.ans1.setDisabled(True)
             self.w3.ans2.setDisabled(True)
             self.w3.ans3.setDisabled(True)
             self.w3.ans4.setDisabled(True)
-            self.prevb = self.w3.sender()
-            self.prev = self.current
+            self.w3.poyas.show()
+
+        self.prevb = self.w3.sender()
+        self.prev = self.current
 
     def go2over1(self):
         self.w3.g21.show()
@@ -463,6 +460,23 @@ class MyWidget(QMainWindow):
         self.w3.g25.show()
         self.trimer = self.trimer + dt.timedelta(minutes=5)
         self.overtime1 = True
+        variant = random.randrange(1, 5)
+        blu = (variant, self.misses[0])
+        if blu == self.block1v or blu == self.block2v or blu == self.block3v or blu == self.block4v:
+            if blu[0] != 4:
+                blu = (blu[0] + 1, blu[1])
+            else:
+                blu = (blu[0] - 1, blu[1])
+        con = sqlite3.connect("base.db")
+        cur = con.cursor()
+        ot = cur.execute(f"""SELECT question, firstu, secondu, firdu, fourth, rightu, poyas FROM questions
+                            WHERE variant = {blu[0]} and block = {blu[1]}""").fetchall()
+        self.questions = self.questions + ot
+
+        con.close()
+
+
+
         
         
     def go2over2(self):
@@ -473,33 +487,72 @@ class MyWidget(QMainWindow):
         self.w3.g30.show()
         self.trimer = self.trimer + dt.timedelta(minutes=5)
         self.overtime2 = True
-    
+        variant = random.randrange(1, 5)
+        blu = (variant, self.misses[1])
+        if blu == self.block1v or blu == self.block2v or blu == self.block3v or blu == self.block4v:
+            if blu[0] != 4:
+                blu = (blu[0] + 1, blu[1])
+            else:
+                blu = (blu[0] - 1, blu[1])
+        con = sqlite3.connect("base.db")
+        cur = con.cursor()
+        ot = cur.execute(f"""SELECT question, firstu, secondu, firdu, fourth, rightu, poyas FROM questions
+                                    WHERE variant = {blu[0]} and block = {blu[1]}""").fetchall()
+        self.questions = self.questions + ot
+
+        con.close()
+
     def endex(self):
         self.ended = True
-        if self.t < 18:
-            self.w3.final_2.setText(f"Экзамен\n не сдан\n правильных\n ответов:\n {self.t} из 20")
+        if self.t < 18 and self.c == 20:
+            self.w3.final_2.setText(f"Экзамен\n не сдан\n правильных\n ответов:\n {self.t} из {self.c}")
             self.w3.final_2.setStyleSheet('color: rgb(255,0,14);')
             self.b = self.trimer
             self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
             self.w3.timer.setText(self.b.strftime("%M:%S"))
-        if self.t == 20:
+        if self.t == 20 and self.c == 20:
             self.w3.final_2.setText(f"Экзамен\n cдан\n правильных\n ответов:\n {self.t} из 20")
             self.w3.final_2.setStyleSheet('color: rgb(0,255,14);')
             self.b = self.trimer
             self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
             self.w3.timer.setText(self.b.strftime("%M:%S"))
-        if self.t == 24 and self.overtime2 is False:
+        if self.t == 24 and self.c == 25:
             self.w3.final_2.setText(f"Экзамен\n cдан\n правильных\n ответов:\n {self.t} из 25")
             self.w3.final_2.setStyleSheet('color: rgb(0,255,14);')
             self.b = self.trimer
             self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
             self.w3.timer.setText(self.b.strftime("%M:%S"))
-        if self.t == 28:
+        if self.t == 28 and self.c == 30:
             self.w3.final_2.setText(f"Экзамен\n cдан\n правильных\n ответов:\n {self.t} из 30")
             self.w3.final_2.setStyleSheet('color: rgb(0,255,14);')
             self.b = self.trimer
             self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
             self.w3.timer.setText(self.b.strftime("%M:%S"))
+        if self.t < 24 and self.c == 25:
+            self.w3.final_2.setText(f"Экзамен\n не cдан\n правильных\n ответов:\n {self.t} из 25")
+            self.w3.final_2.setStyleSheet('color: rgb(255,0,14);')
+            self.b = self.trimer
+            self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
+            self.w3.timer.setText(self.b.strftime("%M:%S"))
+        if self.t == 18 and self.c == 20 and self.tupost:
+            self.w3.final_2.setText(f"Экзамен\n не cдан\n правильных\n ответов:\n {self.t} из 20")
+            self.w3.final_2.setStyleSheet('color: rgb(255,0,14);')
+            self.b = self.trimer
+            self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
+            self.w3.timer.setText(self.b.strftime("%M:%S"))
+        if self.t < 24 and self.c == 25:
+            self.w3.final_2.setText(f"Экзамен\n не cдан\n правильных\n ответов:\n {self.t} из 25")
+            self.w3.final_2.setStyleSheet('color: rgb(255,0,14);')
+            self.b = self.trimer
+            self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
+            self.w3.timer.setText(self.b.strftime("%M:%S"))
+        if self.t < 28 and self.c == 30:
+            self.w3.final_2.setText(f"Экзамен\n не cдан\n правильных\n ответов:\n {self.t} из 30")
+            self.w3.final_2.setStyleSheet('color: rgb(255,0,14);')
+            self.b = self.trimer
+            self.trimer = dt.datetime(20, 1, 1, 0, 0, 0)
+            self.w3.timer.setText(self.b.strftime("%M:%S"))
+
 
 
 
@@ -513,53 +566,43 @@ class MyWidget(QMainWindow):
             self.t += 1
         else:
             self.stat[str(self.current)] = (2, self.stat[str(self.current)][1])
+            if self.w3.ans1.text() == self.sender().text():
+                self.stat[str(self.current)] = (self.stat[str(self.current)][0], 1)
+            if self.w3.ans2.text() == self.sender().text():
+                self.stat[str(self.current)] = (self.stat[str(self.current)][0], 2)
+            if self.w3.ans3.text() == self.sender().text():
+                self.stat[str(self.current)] = (self.stat[str(self.current)][0], 3)
+            if self.w3.ans4.text() == self.sender().text():
+                self.stat[str(self.current)] = (self.stat[str(self.current)][0], 4)
             self.w3.ans1.setDisabled(True)
             self.w3.ans2.setDisabled(True)
             self.w3.ans3.setDisabled(True)
             self.w3.ans4.setDisabled(True)
+            if self.current <= 5:
+                self.misses.append(1)
+            elif self.current > 5 and self.current <= 10:
+                self.misses.append(2)
+            elif self.current > 10 and self.current <= 15:
+                self.misses.append(3)
+            elif self.current > 15 and self.current <= 20:
+                self.misses.append(4)
 
         self.c += 1
         if self.c == 20 and self.t == 19:
-            missedblock1 = 0
-            for i in self.stat:
-                if self.stat[i][1] == 2:
-                    que = int(i)
-                if que <= 5:
-                    missedblock1 = 1
-                    misap = self.block1v
-                elif que > 5 and que <= 10:
-                    missedblock1 = 2
-                    misap = self.block2v
-                elif que > 10 and que <= 15:
-                    missedblock1 = 3
-                    misap = self.block3v
-                elif que > 15 and que <= 20:
-                    missedblock1 = 4
-                    misap = self.block4v
-            con = sqlite3.connect("base.db")
-            cur = con.cursor()
-            f = True
-            vari = random.randrange(1,5)
-            while f:
-                if vari != misap[0]:
-                    f = False
-                else:
-                    vari = random.randrange(1, 5)
-            self.questions = self.questions + cur.execute(f"""SELECT question, firstu, secondu, firdu, fourth, rightu, poyas FROM questions
-                                WHERE variant = {vari} and block = {missedblock1}""").fetchall()
-            print(self.questions)
-            con.close()
-
-
             self.go2over1()
-        if self.c == 20 and self.t == 18:
+        if self.c == 20 and self.t == 18 and self.misses[0] == self.misses[1]:
+            self.tupost = True
+            self.endex()
+        if self.c == 20 and self.t == 18 and self.misses[0] != self.misses[1]:
             self.go2over1()
             self.go2over2()
-        if self.c == 20:
-            self.endex()
-        if self.c == 25:
+        if self.c == 25 and not self.overtime2:
             self.endex()
         if self.c == 30:
+            self.endex()
+        if self.c == 20 and self.t < 18:
+            self.endex()
+        if self.c == 20 and self.t == 20:
             self.endex()
 
 
