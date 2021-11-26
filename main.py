@@ -303,10 +303,10 @@ class MyWidget(QMainWindow):
         self.tick_timere()
         con = sqlite3.connect("base.db")
         cur = con.cursor()
-        self.block1v = (random.randrange(1,5), 1)
-        self.block2v = (random.randrange(1,5), 2)
-        self.block3v = (random.randrange(1,5), 3)
-        self.block4v = (random.randrange(1,5), 4)
+        self.block1v = (random.randrange(1,6), 1)
+        self.block2v = (random.randrange(1,6), 2)
+        self.block3v = (random.randrange(1,6), 3)
+        self.block4v = (random.randrange(1,6), 4)
         self.questions = cur.execute(f"""SELECT question, firstu, secondu, firdu, fourth, rightu, poyas FROM questions
                     WHERE variant = {self.block1v[0]} and block = 1""").fetchall()
         self.questions = self.questions + cur.execute(f"""SELECT question, firstu, secondu, firdu, fourth, rightu, poyas FROM questions
@@ -460,10 +460,10 @@ class MyWidget(QMainWindow):
         self.w3.g25.show()
         self.trimer = self.trimer + dt.timedelta(minutes=5)
         self.overtime1 = True
-        variant = random.randrange(1, 5)
+        variant = random.randrange(1, 6)
         blu = (variant, self.misses[0])
         if blu == self.block1v or blu == self.block2v or blu == self.block3v or blu == self.block4v:
-            if blu[0] != 4:
+            if blu[0] != 5:
                 blu = (blu[0] + 1, blu[1])
             else:
                 blu = (blu[0] - 1, blu[1])
@@ -487,10 +487,10 @@ class MyWidget(QMainWindow):
         self.w3.g30.show()
         self.trimer = self.trimer + dt.timedelta(minutes=5)
         self.overtime2 = True
-        variant = random.randrange(1, 5)
+        variant = random.randrange(1, 6)
         blu = (variant, self.misses[1])
         if blu == self.block1v or blu == self.block2v or blu == self.block3v or blu == self.block4v:
-            if blu[0] != 4:
+            if blu[0] != 5:
                 blu = (blu[0] + 1, blu[1])
             else:
                 blu = (blu[0] - 1, blu[1])

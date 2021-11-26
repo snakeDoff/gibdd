@@ -1,4 +1,3 @@
-
-for i in range(2,31):
-        print(f'self.w3.g{i}.clicked.connect(self.choseEX)')
+for i in range(81,101):
+        print(f'questions/{i}p.png')
 
